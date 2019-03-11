@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    width: 100%;
+    height: 100%;
+}
+.flex_center{
+    display: flex;
+    flex-direction: column;
+}
+.flex_between{
+    width: 4.4rem;
+    display: flex;
+    justify-content: space-between;
+}
+body{
+    width: 100%;
+    /* height: 100%; */
+    overflow: auto;
+    /* background: url(../../img/201903GiftActive/bg.png) no-repeat;
+    background-size:100% ;  */
+}
+.img_bg{
+    width: 100%;
+}
+.gift_contain{
+    font-size: .32rem;
+    color: #fff;
+}
+.gift_contain .coupon_main{
+    position: absolute;
+    top: 9.99rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.gift_contain .coupon_main .coupon_item_list{
+    margin-top: .29rem;
+}
+.gift_contain .coupon_main .coupon_item{
+    width: 7.8rem;
+    height: 3.23rem;
+    background: url(../../img/201903GiftActive/card-bg.jpg) no-repeat;
+    /* background: #FBEAF0;
+    box-shadow:-2px 12px 8px 0px rgba(155,30,26,0.18); */
+    background-size: 100% 100%;
+    border-radius: .13rem;
+    margin-bottom: .29rem;
+    padding: .38rem .43rem .39rem .52rem;
+    box-sizing: border-box;
+}
+.coupon_item img{
+    width: 2.09rem;
+    height: 1.49rem;
+    border-radius: .13rem;
+}
+.coupon_item .coupon_item_num{
+    display: flex;
+}
+.coupon_item .coupon_item_num .item_num_text{
+    color: #4E3B43;
+    font-size: .53rem;
+    margin-left: .37rem;
+    font-family: 'PingFangSC-Regular';
+}
+@media screen and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2){
+    .coupon_item .coupon_item_num .item_num_text{
+        font-size: .5rem;
+    }
+}
+.coupon_item .coupon_item_num  .item_num_price{
+    color: #DD4C3C;
+    font-size: .77rem;
+    font-family: 'Impact';
+}
+.coupon_item .coupon_item_num  .item_num_price span{
+    font-size: .44rem;
+}
+.coupon_item .coupon_item_num .item_num_time{
+  display: flex;
+  align-items: flex-end; 
+  color: #222222;
+  font-size: .27rem;
+  opacity:0.3; 
+}
+.coupon_item .coupon_item_intro{
+   color: #4E3B43;
+   font-size: .33rem;
+   opacity:0.7;
+   border-top: .01rem solid #CF4B3C;
+   opacity: .4;
+   margin-top: .29rem;
+   padding-top: .24rem;
+}
+
+.gift_contain .gift_btnbox{
+    position: absolute;
+    top: 21.59rem;
+    width:9.25rem;
+    height: 1.57rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url(../../img/201903GiftActive/btn.png) no-repeat;
+    background-size:100%; 
+    cursor: pointer;
+}

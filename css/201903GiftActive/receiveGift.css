@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    width: 100%;
+    height: 100%;
+}
+.flex_center{
+    display: flex;
+    flex-direction: column;
+}
+.flex_between{
+    width: 4.4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.flex_normal{
+    align-items: center;
+}
+body{
+    width: 100%;
+    /* height: 35.6rem; */
+    overflow: auto;
+    /* background: url(../../img/201903GiftActive/bg2.png) no-repeat;
+    background-size:100% ;  */
+}
+.img_bg{
+    width: 100%;
+}
+.gift_contain{
+    font-size: .32rem;
+    color: #fff;
+}
+.gift_contain .coupon_main{
+    position: absolute;
+    top: 5.99rem;
+    /* width: 8.48rem; */
+    height: 12.7rem;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow: auto;
+    transition: all .5s;
+}
+.gift_contain .coupon_main::-webkit-scrollbar {
+    display: none;
+}
+.gift_contain .coupon_main .coupon_item_list{
+    margin-top: .29rem;
+}
+.gift_contain .coupon_main .coupon_item{
+    width: 7.8rem;
+    height: 3.23rem;
+    background: url(../../img/201903GiftActive/card-bg.jpg) no-repeat;
+    background-size: 100% 100%;
+    border-radius: .13rem;
+    margin-bottom: .29rem;
+    padding: .38rem .43rem .39rem .52rem;
+    box-sizing: border-box;
+    position: relative;
+}
+.coupon_item img{
+    width: 2.09rem;
+    height: 1.49rem;
+    border-radius: .13rem;
+}
+.coupon_item .coupon_item_num{
+    display: flex;
+}
+.coupon_item .coupon_item_num .item_num_text{
+    color: #4E3B43;
+    font-size: .53rem;
+    margin-left: .2rem;
+    font-family: 'PingFangSC-Regular';
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+@media screen and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2){
+    .coupon_item .coupon_item_num .item_num_text{
+        font-size: .5rem;
+    }
+}
+.coupon_item .coupon_item_num  .item_num_price{
+    color: #CF4B3C;
+    font-size: .32rem;
+}
+.coupon_item .coupon_item_num .item_num_invite{
+    font-size: .32rem;
+    color: #222222;
+}
+
+.coupon_item .coupon_item_num  .item_num_invite span{
+    color: #CF4B3C;
+}
+.coupon_item .coupon_item_num .item_num_time{
+  font-size: .27rem;
+  color:rgba(34,34,34,1);
+  opacity:0.3;
+}
+.coupon_item .coupon_item_num .item_num_inviteBtn{
+    font-size: .32rem;
+    width: 1.4rem;
+    height: .61rem;
+    /* position: absolute;
+    right: .43rem; */
+    color:#fff;
+    /* top: 1.3rem; */
+    background: #CF4B3C;
+    border-radius: .13rem;
+    text-align: center;
+    line-height: .61rem;
+  }
+.coupon_item .coupon_item_intro{
+   color: #4E3B43;
+   font-size: .33rem;
+   opacity:0.7;
+   border-top: .01rem solid #CF4B3C;
+   opacity: .4;
+   margin-top: .29rem;
+   padding-top: .24rem;
+}
+
+.gift_contain .gift_btnbox{
+    position: absolute;
+    top: 19.74rem;
+    width:9.25rem;
+    height: 1.57rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url(../../img/201903GiftActive/btn2.png) no-repeat;
+    background-size:100%; 
+    cursor: pointer;
+}
+@media screen and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2){
+    .coupon_item .coupon_item_num .item_num_invite{
+        font-size: .28rem;
+    }
+    .coupon_item .coupon_item_num .item_num_inviteBtn{
+        width: 1.1rem;
+        font-size: .28rem;
+    }
+    .coupon_item .coupon_item_num .item_num_price{
+        font-size: .28rem;
+    }
+}

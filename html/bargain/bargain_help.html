@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../css/bargain/bargain_help.css">
+</head>
+<body>
+    <div class="bargain_help_main">
+        <div class="help_main_top">
+            <div class="top_title">
+                <!-- tpo -->
+                <div class="top_title_center">
+                    <img src="../../img/201903GiftActive/card3.jpg" alt="">
+                    <div class="center_text">
+                        <p>油呗标准洗车券·杭州</p>
+                        <p>1个即可拿</p>
+                        <p>价值35元 <span>312人已0元拿</span> </p>
+                    </div>
+                </div>
+                <!-- bottom progress -->
+                <div class="bottom_textbox">
+                    已帮好友砍价<span class="color_red">3.5</span>元，也帮自己砍掉<span>6.9</span>元，再砍<span>65.23</span>元也可免费
+                    拿该商品
+                </div>
+
+                
+            </div>
+
+            <!-- btn -->
+            <div class="help_main_btn ">
+                <i></i> 帮朋友砍一刀
+            </div>
+
+            <!-- 结束 -->
+            <div class="help_main_time">
+                <p></p>
+                <p class="main_time">还剩00:00:00结束，抓紧砍价吧</p>
+                <p></p>
+            </div>
+
+            <div class="bargain_main bargain_coupon">
+                <span class="bargain_coupon_title">砍价商品</span>
+                <div class="coupon_listbox">
+                    <ul class="coupon_list">
+                        <li class="coupon_item">
+                            <div class="coupon_item_left">
+                                <img class="coupon_item_left_img" src="../../img/201903GiftActive/card-bg.jpg" alt="">
+                            </div>
+                            <div class="coupon_item_right">
+                                <div class="coupon_item_intro">
+                                    <p class="intro_type">油呗标准洗车券</p>
+                                    <p class="intro_cont">油呗标准洗车券</p>
+                                    <p class="intro_price">
+                                        价值35元
+                                        <span class="intro_price_people">312人已0元拿</span>
+                                    </p>
+                                </div>
+                                <div class="coupon_item_btn  ">
+                                        点击免费拿
+                                </div>
+                            </div>
+                        </li>
+                        <li class="coupon_item">
+                            <div class="coupon_item_left">
+                                <img class="coupon_item_left_img" src="../../img/201903GiftActive/card-bg.jpg" alt="">
+                            </div>
+                            <div class="coupon_item_right">
+                                <div class="coupon_item_intro">
+                                    <p class="intro_type">油呗标准洗车券</p>
+                                    <p class="intro_cont">油呗标准洗车券</p>
+                                    <p class="intro_price">
+                                        价值35元
+                                        <span class="intro_price_people">312人已0元拿</span>
+                                    </p>
+                                </div>
+                                <div class="coupon_item_btn  disabled_btn">
+                                        店主免费拿
+                                </div>
+                            </div>
+                        </li>
+                        <li class="coupon_item">
+                            <div class="coupon_item_left">
+                                <img class="coupon_item_left_img" src="../../img/201903GiftActive/card-bg.jpg" alt="">
+                                <span class="coupon_tips coupon_time">  12:19:12后结束</span>
+                            </div>
+                            <div class="coupon_item_right">
+                                <div class="coupon_item_intro">
+                                    <p class="intro_type">油呗标准洗车券</p>
+                                    <p class="intro_cont">油呗标准洗车券</p>
+                                    <p class="intro_price">
+                                        价值35元
+                                        <span class="intro_price_people">312人已0元拿</span>
+                                    </p>
+                                </div>
+                                <div class="coupon_item_btn  renew_btn">
+                                        正在砍价
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 砍价成功弹窗 -->
+    <div class="success_main">
+        <div class="success_main_mask"></div>
+        <div class="success_main_cont">
+            <div class="success_main_cont_top ">
+                <div class="success_top_main">
+                    <img class="" src="../../img/bargain/icon-wx.png" alt="">
+                    <p>谢谢你帮我砍了<span class="red">5.9</span>元</p>
+                    <p class="spection_text">也帮自己砍掉<span class="red">6.9</span>元，再砍<span class="red">65.23</span> 
+                        元也能免费拿【油呗标准洗车】
+                    </p>
+                </div>
+            </div>
+            <div class="success_main_cont_btnbox ">
+                <span class="success_main_cont_btn ">
+                    立即领取
+                </span>
+                <span class="success_main_cont_btn immediately_btn">
+                    立即领取
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="success_guide hide">
+        <div class="success_guide_mask"></div>
+        <div class="success_guide_cont">
+            <img src="../../img/bargain/icon-wx.png" alt="">
+        </div>
+    </div>
+</body>
+<script src="../../js/common/require.js" data-main="../../js/common/main.js"></script>
+<script>
+require(['jquery','rem'], function($) {
+    const page = {
+        init(){
+            this.initEvent()
+        },
+        initEvent(){
+            this.handleCountdown()   // 倒计时
+        },
+        handleFormatTime(time){
+            let miniSec = (time % 6000) % 10;
+            time = parseInt(time / 10, 10);
+            let sec = time % 60;
+            let hour = parseInt(time / 3600, 10);
+            let min = parseInt((time - (hour * 3600)) / 60, 10);
+
+            sec = sec < 10 ? ('0' + sec) : sec
+            min = min < 10 ? ('0' + min) : min
+            hour = hour < 10 ? ('0' + hour) : hour
+
+            return hour + ':' + min + ':' + sec;
+        },
+        handleCountdown(){
+            let timer = ''
+            let time = 100
+            const main = $('.main_time')
+            const coupon_time = $('.coupon_time')
+            timer = setInterval( () => {
+                let _time = --time;
+                const runTime = this.handleFormatTime(_time)
+                const html = `还剩${runTime}结束，抓紧砍价吧`
+                const html2 = `${runTime}后结束`
+                main.html(html)
+                coupon_time.html(html2)
+                if(time === 0){
+                    clearInterval(timer)
+                }
+            },100)
+        },
+    }
+    $(() => {
+        page.init()
+    })
+})
+</script>
+</html>

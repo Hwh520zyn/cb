@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>砍价免费拿</title>
+    <link rel="stylesheet" href="../../css/bargain/bargain_detail.css">
+</head>
+<body>
+    <div class="bargain_detail_main">
+        <div class="detail_main_top">
+            <div class="top_title">
+                <!-- tpo -->
+                <div class="top_title_top">
+                    <div class="top_title_intro">
+                        <img src="../../img/201903GiftActive/card2.jpg" alt="">
+                        <span>xxx发起</span>
+                    </div>
+                    <span class="top_title_btn">详细规则</span>
+                </div>
+                <!-- center -->
+                <div class="top_title_center">
+                    <img src="../../img/201903GiftActive/card3.jpg" alt="">
+                    <div class="center_text">
+                        <p>油呗标准洗车券·杭州</p>
+                        <p>1个即可拿</p>
+                        <p>价值35元 <span>312人已0元拿</span> </p>
+                    </div>
+                </div>
+                <!-- bottom progress -->
+                <div class="bottom_progress">
+                    <div class="progress_bar_box">
+                        <span class="bottom_progress_bar "></span>
+                        <span class="progress_bar_show">
+
+                        </span>
+                    </div>
+                    <div class="progress_bar_text">
+                        <span class="alread_bargain">已砍 <em>29</em> 元
+                            </span>
+                        <span class="remain_barmain">剩余 <em>6</em> 元</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- btn -->
+            <div class="detail_main_btn success_btn">
+                 <i></i> 喊朋友砍一刀
+            </div>
+            <!-- 结束 -->
+            <div class="detail_main_time">
+                <p></p>
+                <p class="main_time">还剩00:00:00结束，抓紧砍价吧</p>
+                <p></p>
+            </div>
+            <!-- 砍价帮 - 砍价实况 -->
+            <div class="bargain_main">
+               <ul class="bargain_main_title">
+                   <li class="title_item active">
+                        砍价帮
+                   </li>
+                   <li class="title_item">
+                        砍价实况
+                   </li>
+               </ul>
+
+               <div class="bargain_main_cont">
+                   <!-- left -->
+                   <div class="main_cont_list show_cont">
+                        <div class="main_cont_item">
+                            <div class="cont_item_left">
+                                <img  class="item_left_img"src="../../img/201903GiftActive/card1.jpg" alt="">
+
+                                <div class="item_left_name">
+                                    <span class="left_name_text">这是名字 <i class="icon_vip"></i> </span>
+                                    <p class="left_name_intro"> <span>喊Ta当店主</span> 快刀斩乱麻</p>
+                                </div>
+                            </div>
+                            <div class="cont_item_right">
+                                砍掉9.5元
+                            </div>
+                        </div>
+
+                        
+                   </div>
+                   <!-- right -->
+                   <div class="main_cont_list ">
+                        <div class="main_cont_item">
+                            <div class="cont_item_left">
+                                    <img  class="item_left_img"src="../../img/201903GiftActive/card1.jpg" alt="">
+                                    <div class="item_left_bargain">
+                                        <span>名字这么长名字这么长</span>
+                                        0元购买了油呗标准洗车券
+                                    </div>
+                            </div>
+                       </div>
+                   </div>
+               </div>
+            </div>
+        </div>
+    </div>
+    <!-- 砍价成功弹窗 -->
+    <div class="success_main">
+        <div class="success_main_mask"></div>
+        <div class="success_main_cont">
+            <div class="success_main_cont_top ">
+                <div class="success_top_text">
+                    恭喜您，成功砍价<span class="class="red"">13.7</span>元
+                </div>
+            </div>
+            <div class="success_main_cont_bottom ">
+                <p class="center"> 立即分享，马上多砍<span class="red">13</span>元</p>
+                <p class="center">首次分享好友及朋友圈各多砍6.5元</p>
+                <div class="success_bottom_share">
+                    <div class="icont_share center wx_friend">
+                        <img src="../../img/bargain/icon-wx.png" alt="">
+                        <p>微信好友</p>
+                    </div>
+                    <div class="icont_share center wx_friend_circle">
+                        <img src="../../img/bargain/friend-c.png" alt="">
+                        <p>朋友群</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="success_main_cont_btnbox hide">
+                <span class="success_main_cont_btn ">
+                    立即领取
+                </span>
+                <span class="success_main_cont_btn immediately_btn">
+                    立即领取
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="success_guide hide">
+        <div class="success_guide_mask"></div>
+        <div class="success_guide_cont">
+            <img src="../../img/bargain/icon-wx.png" alt="">
+        </div>
+    </div>
+</body>
+<script src="../../js/common/require.js" data-main="../../js/common/main.js"></script>
+<script>
+require(['jquery','rem'], function($) {
+    const page = {
+        init(){
+           this.initEvent() 
+        },
+        initEvent(){
+            this.handleProgress() // 进度条
+            this.handleCountdown()   // 倒计时
+            this.handleToggle() // 切换
+            this.handleWxshareGuide() // 微信分享引导
+            this.handleCloseGuide() // 点击空白关闭图片引导
+        },
+        
+        handleProgress(){
+            const progress = $('.progress_bar_show')
+            const alread_bargain = $('.alread_bargain').find('em').html()
+            const remain_barmain = $('.remain_barmain').find('em').html()
+            const total = Number(alread_bargain) + Number(remain_barmain)
+            const percentage = Number(alread_bargain)/ Number(total)
+            let final = percentage * 100
+            final = final.toFixed(2)
+            progress.css('width', final + '%')
+        },
+        handleFormatTime(time){
+            let miniSec = (time % 6000) % 10;
+            time = parseInt(time / 10, 10);
+            let sec = time % 60;
+            let hour = parseInt(time / 3600, 10);
+            let min = parseInt((time - (hour * 3600)) / 60, 10);
+
+            sec = sec < 10 ? ('0' + sec) : sec
+            min = min < 10 ? ('0' + min) : min
+            hour = hour < 10 ? ('0' + hour) : hour
+
+            return hour + ':' + min + ':' + sec;
+        },
+        handleCountdown(){
+            let timer = ''
+            let time = 100
+            const main = $('.main_time')
+            timer = setInterval( () => {
+                let _time = --time;
+                const runTime = this.handleFormatTime(_time)
+                const html = `还剩${runTime}结束，抓紧砍价吧`
+                main.html(html)
+                if(time === 0){
+                    clearInterval(timer)
+                }
+            },100)
+        },
+        handleToggle(){
+            const title = $('.bargain_main_title').find('.title_item')
+            const cont = $('.bargain_main_cont').find('.main_cont_list')
+            title.on('click', function () {
+                const index = $(this).index()
+                $(this).addClass('active').siblings().removeClass('active')
+                cont.eq(index).addClass('show_cont').siblings().removeClass('show_cont')
+            })
+        },
+        handleWxshareGuide(){
+            const detail_main_btn = $('.detail_main_btn')
+            const el = $('.wx_friend, .wx_friend_circle') 
+            const success_guide =  $('.success_guide')
+            const success_main = $('.success_main')
+            detail_main_btn.on('click', () => {
+                success_main.show(200)
+            })
+            el.on('click', (e) => {
+                e.stopPropagation();
+                success_guide.show()
+            })
+        },
+        handleCloseGuide(){
+            const success_guide = $('.success_guide')
+            $(document).on('click', () => {
+                success_guide.hide()
+            })
+        },
+        handleE(){}
+    }
+    $(() => {
+        page.init()
+    })
+})
+</script>
+</html>

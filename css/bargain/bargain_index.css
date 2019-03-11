@@ -1,0 +1,176 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body,html{
+    width: 100%;
+    height: 100%;
+}
+.bargain_contain{
+   
+}
+.bargain_contain .banner_img{
+    display: block;
+    width: 100%;
+    height: 3.89rem;
+}
+.bargain_contain .bargain_rules{
+    position: absolute;
+    width: 2rem;
+    height: .64rem;
+    right: 0;
+    top: .29rem;
+    background:linear-gradient(109deg,rgba(254,229,94,1) 0%,rgba(253,181,66,1) 100%);
+    box-shadow: .03rem .05rem .29rem 0 rgba(127, 255, 108, 0.35);
+    border-radius: .32rem 0 0 .32rem;
+    color: #fff;
+    font-size: .32rem;
+    line-height: .64rem;
+    padding:0 .12rem 0 .22rem;
+    box-sizing: border-box;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.bargain_contain .bargain_rules img{
+    width: .12rem;
+    height: .22rem;
+
+}
+.bargain_contain .bargain_line{
+    width: 100%;
+    height: .27rem;
+    background: #F7F7F7;
+}
+/*  */
+.bargain_contain .bargain_scroll{
+    width: 100%;
+    height: 1.07rem;
+    background: #fff;
+    overflow: hidden;
+}
+.bargain_contain .bargain_scroll_list{
+    height: 1.07rem;
+}
+.bargain_contain .bargain_scroll_list .scroll_list_item{
+    padding: 0 .27rem;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+.bargain_contain .bargain_scroll_list .scroll_list_item img{
+    width: .72rem;
+    height: .72rem;
+    border-radius: 50%;
+    margin-right: .16rem;
+}
+.scroll_list_item .scroll_item_text{
+    color: #666;
+    font-size: .35rem;
+}
+.scroll_list_item .scroll_item_text .item_price{
+    color: #FF4A4A;
+}
+/* 券 */
+.bargain_contain .bargain_coupon{
+    width: 100%;
+    background: #fff;
+}
+.bargain_contain .bargain_coupon .bargain_coupon_title{
+   padding-bottom: .4rem ;
+   color: #222222;
+   font-size: .48rem;
+   margin: .4rem .27rem .37rem;
+   display: block;
+   border-bottom: .03rem solid rgba(9,1,3,0.05)
+}
+.bargain_contain .bargain_coupon .coupon_listbox{
+    padding: 0 .21rem;
+}
+.bargain_coupon .coupon_listbox .coupon_list .coupon_item{
+    display: flex;
+    margin-bottom: .37rem;
+}
+.bargain_coupon .coupon_listbox .coupon_list .coupon_item:last-child .coupon_item_right{
+    border: none;
+}
+.bargain_coupon .coupon_listbox .coupon_list .coupon_item .coupon_item_left{
+    position: relative
+}
+.bargain_coupon .coupon_listbox .coupon_list .coupon_item .coupon_item_left .coupon_item_left_img{
+    width: 2.51rem;
+    height: 1.52rem;
+}
+.bargain_coupon .coupon_listbox .coupon_list .coupon_item .coupon_item_left .coupon_tips{
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%,-50%);
+    width: 2.13rem;
+    height: .64rem;
+    background: rgba(3,3,3,.6);
+    border-radius: .32rem;
+    text-align: center;
+    line-height: .64rem;
+    color: #fff;
+    font-size: .29rem;
+}
+.bargain_coupon .coupon_listbox .coupon_list .coupon_item .coupon_item_left .coupon_time{
+    font-size: .27rem;
+}
+.bargain_coupon .coupon_listbox .coupon_list .coupon_item .coupon_item_right{
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-bottom: .03rem solid rgba(9,1,3,0.05);
+    padding-bottom: .43rem;
+    margin-left: .21rem;
+}
+.coupon_list .coupon_item .coupon_item_intro{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 1.52rem;
+}
+.coupon_list .coupon_item .coupon_item_intro .intro_type{
+    color: #222;
+    font-size: .37rem;
+}
+.coupon_list .coupon_item .coupon_item_intro .intro_cont{
+    color: #999;
+    font-size: .29rem;
+}
+.coupon_list .coupon_item .coupon_item_intro .intro_price{
+    color: #999;
+    font-size: .27rem;
+}
+.coupon_list .coupon_item .coupon_item_intro .intro_price .intro_price_people{
+    font-size: .32rem;
+    color: #FF4A4A;
+    margin-left: .32rem;
+}
+.coupon_list .coupon_item .coupon_item_btn{
+    background:linear-gradient(94deg,rgba(253,190,71,1) 0%,rgba(249,224,56,1) 98%);
+    border-radius: .29rem;
+    width: 2.08rem;
+    height: .59rem;
+    font-size: .29rem;
+    color: #fff;
+    text-align: center;
+    line-height:  .59rem;
+}
+.coupon_list .coupon_item  .disabled_btn{
+    background: #DCDCDC;
+}
+.coupon_list .coupon_item  .renew_btn{
+    background: none;
+    color: #FDBE47;
+    border: .03rem solid #FDBF46;
+}
+.coupon_list .coupon_item  .success_btn{
+    background: none;
+    background:linear-gradient(93deg,rgba(8,166,75,1) 0%,rgba(105,234,27,1) 100%);
+    opacity: .8;
+}
